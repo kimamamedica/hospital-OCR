@@ -79,7 +79,8 @@
 
       const values = [[name, id, bd, ag, timestamp.toISOString(), note]];
 
-      const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1!A1:append?valueInputOption=RAW&key=YOUR_API_KEY`, {
+      const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1!A1:append?valueInputOption=RAW&key=AIzaSyDiQu_g0GsNP1YAltU70Lj6FJnsijzYwEA
+`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ values })
