@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital OCR Web App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>קליטת מדבקת אשפוז</h1>
+
+  <input type="file" accept="image/*" id="imageInput" capture="environment" />
+  <canvas id="previewCanvas"></canvas>
+
+  <div id="results">
+    <label>שם: <input id="nameInput" /></label><br/>
+    <label>ת.ז: <input id="idInput" /></label><br/>
+    <label>תאריך לידה: <input id="birthInput" /></label><br/>
+    <label>גיל: <input id="ageInput" /></label><br/>
+    <label>הערות: <textarea id="notesInput"></textarea></label><br/>
+  </div>
+
+  <button id="exportBtn">שלח ל־Google Sheets</button>
+  <button id="settingsBtn">הגדרות</button>
+
+  <!-- תיבת הגדרות -->
+  <div id="settingsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>הכנס קישור ל־Google Sheet</h3>
+      <input id="sheetUrlInput" />
+      <button id="saveSettingsBtn">שמור</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
